@@ -1,29 +1,24 @@
-
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-    int n,i,arr[100],count=0;
+    int x[20],n,i,flag=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
-    
-       scanf("%d",&arr[i]);
+    scanf("%d",&x[i]);
     for(i=0;i<n;i++)
     {
-      if(arr[i]%2==0)
-      {
-          if(i%2!=0)
-          {
-          count++;
-          break;
-          }
-      }
+        if(x[i]%2==0)
+        {
+            if(i%2!=0)
+            {
+             flag=1;
+             break;
+            }
+        }
     }
-    if(count==0)
-        printf("True");
+    if(flag==0)
+    printf("True");
     else
-        printf("False");
+    printf("False");
     return 0;
 }
-
-
