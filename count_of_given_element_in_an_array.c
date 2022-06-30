@@ -1,19 +1,24 @@
 #include<stdio.h>
+int ls(int *a,int r,int k)
+{
+	int i,v=0;
+	for(i=0;i<r;i++)
+	{
+		if(k==a[i])
+		{
+		   v++;	
+		}
+	}
+	return v;
+}
 int main()
 {
-    int n,arr[100],i,se,c=0;
-    scanf("%d",&n);
-    for(i=0;i<n;i++)
-    {
-        scanf("%d",&arr[i]);
-    }
-    scanf("%d",&se);
-    for(i=0;i<n;i++)
-    {
-        if(se==arr[i])
-        {
-            c++;
-        }
-    }
-    printf("%d",c);
+	int a[2004],r,k,i;
+	scanf("%d",&r);
+	for(i=0;i<r;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	scanf("%d",&k);
+	printf("%d",ls(a,r,k));
 }
