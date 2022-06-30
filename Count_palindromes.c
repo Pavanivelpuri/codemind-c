@@ -19,7 +19,7 @@ int main()
         }
         if(s==a[i])
         {
-            c++;
+           c++; 
         }
     }
     printf("%d",c);
