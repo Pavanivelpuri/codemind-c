@@ -1,30 +1,41 @@
 #include<stdio.h>
+int fun(int num)
+{
+    int i,fc=0;
+    for(i=1;i<=num;i++)
+	{
+		if(num%i==0)
+		{
+			fc++;	
+		}	
+	}
+	if(fc==2)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
 int main()
 {
-    int n,arr[100],i,k,p=0,m=0,j,c=0;
+    int n,a[100],i,c=0,k;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
-        scanf("%d",&arr[i]);
+        scanf("%d",&a[i]);
     }
     scanf("%d",&k);
     for(i=0;i<n;i++)
     {
-        c=0;
-        if(arr[i]<=k)
+        if(fun(a[i]))
         {
-            for(j=1;j<=arr[i];j++)
+            if(a[i]<=k)
             {
-                if(arr[i]%j==0)
-                {
-                    c++;
-                }
-            }
-            if(c==2)
-            {
-                m++;
+                c+=1;
             }
         }
     }
-    printf("%d",m);
+    printf("%d",c);
 }
